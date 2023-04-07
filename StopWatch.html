@@ -1,0 +1,73 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="Free Web Tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="hege Refsnes">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="stop_watch">
+        <div id="button">
+            <button id="start" class="name_button">Start</button>
+            <button id="Stop" class="name_button">Stop</button>
+            <button id="reset" class="name_button">Reset</button>
+        </div>
+
+        <div id="time">
+            <span id="phut" class="name_button">00</span>
+            <span class="name_button">P</span>
+            <span class="name_button">:</span>
+            <span id="giay" class="name_button">00</span>
+            <span class="name_button">S</span>
+            <span class="name_button">:</span>
+            <span id="miligiay" class="name_button">00</span>
+            <span class="name_button">MS</span>
+            <script>
+                var start = document.getElementById("start");
+                console.log(start);
+                var phut = document.getElementById("phut");
+                var giay = document.getElementById("giay");
+                var miligiay = document.getElementById("miligiay");
+                var stop = document.getElementById("stop");
+                var reset = document.getElementById("reset");
+                var p = 0;
+                var s = 0;
+                var ms = 0;
+                var st;
+                start.onclick = () => {
+                    st = setInterval(() => {
+                        miligiay.innerText = ms++;
+                        giay.innerText = s;
+                        phut.innerText = p;
+
+                        if (ms == 100) {
+                            ms = 0;
+                            s++;
+                            if (s == 60) {
+                                s = 0;
+                                p++;
+                            }
+                        }
+
+                    }, 10)
+                }
+
+
+                console.log(Stop);
+                Stop.onclick = () => {
+                    clearInterval(st);
+
+                }
+                console.log(reset);
+                reset.onclick = () => {
+                    clearInterval(st);
+                    miligiay.innerText = 0;
+                    giay.innerText = 0;
+                    phut.innerText = 0;
+                }
+            </script>
+        </div>
+    </div>
+</body>

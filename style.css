@@ -1,0 +1,25 @@
+#stop_watch {
+    display: flex;
+    flex-direction: column;
+}
+
+#button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 600px;
+}
+
+.name_button {
+    font-size: 50px;
+}
+
+#time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 400px;
+    margin-left: 50px;
+    margin-top: 40px;
+}
